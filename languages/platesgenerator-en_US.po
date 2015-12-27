@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PlatesGenerator\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Anton Nikiforov <support@atatari.com>\n"
+"Language-Team: Atatari <support@atatari.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: d:/\n"
+
+# #defaults
+msgid "your_reg_caption"
+msgstr "<b>Enter Your Registration Number</b>"
+
+msgid "your_reg_description"
+msgstr ""
+"To mis-space or mis-represent the digits on number plates is an offence "
+"under the Road Vehicles (Registration & Licensing) Regulations 1971. Be sure "
+"to enter your registration number correctly because the finished number "
+"plates will be made to the same spacing you enter here."
+
+msgid "plate_size_caption"
+msgstr "<b>Select</b> Plate Size"
+
+msgid "text_style_caption"
+msgstr "<b>Select</b> Your Style"
+
+msgid "badge_caption"
+msgstr "<b>Select</b> Your Badge"
+
+msgid "border_caption"
+msgstr "<b>Select</b> Border Color"
+
+msgid "slogan_caption"
+msgstr "<b>Enter</b> Your Slogan"
+
+msgid "Error!"
+msgstr "Error!"
+
+# #tabs
+msgid "YOUR REG"
+msgstr "YOUR REG"
+
+msgid "PLATE SIZE"
+msgstr "PLATE SIZE"
+
+msgid "TEXT STYLE"
+msgstr "TEXT STYLE"
+
+msgid "BADGE"
+msgstr "BADGE"
+
+msgid "BORDER"
+msgstr "BORDER"
+
+msgid "SLOGAN"
+msgstr "SLOGAN"
+
+# #YOUR REG tab
+msgid "YOUR REG HERE"
+msgstr "YOUR REG HERE..."
+
+# #BORDER tab
+msgid "Border Thickness"
+msgstr "Border Thickness"
+
+# #SLOGAN tab
+msgid "YOUR SLOGAN"
+msgstr "YOUR SLOGAN..."
+
+msgid "I need only one plate"
+msgstr "I need only one plate"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "Buy NOW"
+msgstr "Buy NOW!"
+
+msgid "Buy Now"
+msgstr "Buy Now"
+
+msgid "reset plate"
+msgstr "reset plate"
+
+msgid "All fields are required"
+msgstr "All fields are required"
+
+msgid "NAME"
+msgstr "NAME"
+
+msgid "EMAIL"
+msgstr "EMAIL"
+
+msgid "ADDRESS"
+msgstr "ADDRESS"
+
+msgid "PHONE"
+msgstr "PHONE"
+
+# # Email notification
+msgid "Thank you for your order!"
+msgstr "Thank you for your order!"
+
+msgid "New plate order"
+msgstr "New plate order"
+
+msgid "Resulting image"
+msgstr "Resulting image"
+
+msgid "Amount due"
+msgstr "Amount due"
+
+msgid "Requested features"
+msgstr "Requested features"
+
+msgid "Sending a message TO"
+msgstr "Sending a message TO"
+
+msgid "CUSTOMER"
+msgstr "CUSTOMER"

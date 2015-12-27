@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'plate';
+    src: url('fonts/uknumberplate-webfont.eot');
+    src: url('fonts/uknumberplate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/uknumberplate-webfont.woff') format('woff'),
+         url('fonts/uknumberplate-webfont.ttf') format('truetype'),
+         url('fonts/uknumberplate-webfont.svg#uknumberplateregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+margin: 0;
+padding: 0;
+outline: 0;
+
+}
+
+html  {
+	font-size: 87.5%;
+}
+
+#platesGeneratorWrapper {
+	font-size: 14px;
+	font-size: 1rem;
+	font-family: Helvetica, Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	color: #444;
+	line-height: 1.714285714;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+#platesGeneratorWrapper .clearfix,
+#platesGeneratorWrapper .bc-center,
+#platesGeneratorWrapper .plate-content,
+#platesGeneratorWrapper .main,
+#platesGeneratorWrapper .welcome-container,
+#platesGeneratorWrapper .welcome-tabs-navigation ul,
+#platesGeneratorWrapper .welcome-navigaiton ul,
+#platesGeneratorWrapper .section-bottom,
+#platesGeneratorWrapper .section-top,
+#platesGeneratorWrapper .cart,
+#platesGeneratorWrapper .tab-select ul,
+#platesGeneratorWrapper .color-plate-radio ul,
+#platesGeneratorWrapper ul.ico-plate,
+#platesGeneratorWrapper .drop-down ul li,
+#platesGeneratorWrapper .boxes ul,
+#platesGeneratorWrapper .tab-style ul,
+#platesGeneratorWrapper .bc-content { *zoom: 1; }
+#platesGeneratorWrapper .clearfix:after,
+#platesGeneratorWrapper .cart:after,
+#platesGeneratorWrapper .tab-select ul:after,
+#platesGeneratorWrapper .drop-down ul li:after,
+#platesGeneratorWrapper .welcome-container:after,
+#platesGeneratorWrapper .main:after,
+#platesGeneratorWrapper .tab-style ul:after,
+#platesGeneratorWrapper .color-plate-radio ul:after,
+#platesGeneratorWrapper ul.ico-plate:after,
+#platesGeneratorWrapper .welcome-tabs-navigation ul:after,
+#platesGeneratorWrapper .welcome-navigaiton ul:after,
+#platesGeneratorWrapper .section-bottom:after,
+#platesGeneratorWrapper .section-top:after,
+#platesGeneratorWrapper .boxes ul:after,
+#platesGeneratorWrapper .plate-content:after,
+#platesGeneratorWrapper .bc-center:after,
+#platesGeneratorWrapper .bc-content:after { width: 100%; content: ''; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; display: block; }
+
+#platesGeneratorWrapper ul.ico-plate {max-width:500px;}
+
+#platesGeneratorWrapper a { color: #505256; text-decoration: none; cursor: pointer; }
+#platesGeneratorWrapper a:hover { text-decoration: none; color: #ec9f2b; }
+#platesGeneratorWrapper a img { border: 0; }
+
+#platesGeneratorWrapper a,
+#platesGeneratorWrapper a img { transition: color 1000ms, background-color 1000ms, opacity 1000ms; -webkit-transition: color 1000ms, background-color 1000ms, opacity 1000ms; }
+
+#platesGeneratorWrapper a:hover,
+#platesGeneratorWrapper a:hover img { transition: color 300ms, background-color 300ms, opacity 300ms; -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;}
+
+#platesGeneratorWrapper .logo a:hover,
+#platesGeneratorWrapper .socials a:hover,
+#platesGeneratorWrapper .submit-button:hover,
+#platesGeneratorWrapper a:hover img { opacity: 0.6; -moz-opacity: 0.6; filter:alpha(opacity=60); }
+
+
+#platesGeneratorWrapper a.button-buy { width: 193px; height: 42px; background: url(images/but-button.png) no-repeat 0 0; font-size: 25px; font-style: italic; display: block; color: #fff; font-weight: bold; padding: 5px 0 0 23px; }
+#platesGeneratorWrapper a.button-buy:hover { opacity: 0.70; filter:alpha(opacity=70);}
+#platesGeneratorWrapper a.button { width: 124px; height: 30px; background: url(images/button-reset.png) no-repeat 0 0; font-weight: bold; font-size: 16px; color: #000; text-align: center; display: block; padding-top: 3px; font-family: 'arialBlackiT', arial, serif;  }
+#platesGeneratorWrapper a.button:hover { opacity: 0.70;filter:alpha(opacity=70); }
+
+#platesGeneratorWrapper .plate-radio { width: 156px; margin-top: -4px; }
+#platesGeneratorWrapper .plate-radio,
+#platesGeneratorWrapper .plate-price,
+#platesGeneratorWrapper .plate-buttons { float: left; display: inline; }
+#platesGeneratorWrapper .plate-buttons { margin-left: 15px; width: 216px;  }
+#platesGeneratorWrapper .plate-buttons a.button { float: right; display: inline; margin-top: 10px; height:33px; padding-top: 0;  }
+
+#platesGeneratorWrapper .tabs-title h2 { font-size: 30px; line-height: 32px; color: #918f94; padding-bottom: 10px; }
+#platesGeneratorWrapper .tabs-title p { font-size: 16px; line-height: 22px; color: #918f94; }
+#platesGeneratorWrapper .tabs-title { padding-bottom: 55px;  }
+
+#platesGeneratorWrapper .tabs-navigation { height: 35px; position: relative; z-index: 2; }
+#platesGeneratorWrapper .tabs-navigation ul { list-style: none; height: 34px; border: 1px solid #c8c7c7; border-bottom: 0; border-radius: 2px 2px 0 0; -moz-border-radius: 2px 2px 0 0; -webkit-border-radius: 2px 2px 0 0; -o-border-radius: 2px 2px 0 0; display: inline-block; *zoom: 1; *display: inline; }
+#platesGeneratorWrapper .tabs-navigation ul li { float: left; display: inline; width: 110px; background: url(images/tabs-nav.png) no-repeat 0 0 #f8f8f8; border-left: 1px solid #c8c7c7; text-align: center; }
+#platesGeneratorWrapper .tabs-navigation ul li:first-child {  border-left: 0;  }
+#platesGeneratorWrapper .tabs-navigation ul li a { display: block; font-size: 15px; color: #918f94; font-weight: bold; border-bottom: 1px solid #c8c7c7; padding: 4px 0 3px 0; }
+#platesGeneratorWrapper .tabs-navigation ul li a:hover { color: #d5231b; }
+#platesGeneratorWrapper .tabs-navigation ul li.active a { color: #d5231b; padding-bottom: 4px;  border-bottom: 0; background: url(images/tabs-nav-active.png) repeat-x 0 0; }
+
+#platesGeneratorWrapper .tabs {width:667px;}
+#platesGeneratorWrapper .tab { background: url(images/tab-bg1.png) repeat-x 0 0 #fff; border: 1px solid #c8c7c7; border-radius: 0 0 2px 2px; -moz-border-radius: 0 0 2px 2px; -webkit-border-radius: 0 0 2px 2px; -o-border-radius: 0 0 2px 2px;  position: relative; margin-top: -1px; z-index: 1; padding: 0 17px 17px 17px; min-height: 183px; }
+#platesGeneratorWrapper .tab h3 { font-size: 22px; color: #918f94; font-weight: normal;  }
+
+#platesGeneratorWrapper ul.ico-plate { list-style: none; margin-left: -2px; width: 785px; padding-top: 20px; padding-bottom: 40px; }
+#platesGeneratorWrapper ul.ico-plate li { margin-left:25px; float: left; display: inline; padding-left: 2px; width:5px; height: 55px; padding-bottom: 10px; }
+#platesGeneratorWrapper ul.ico-plate li.last { padding-right: 0;  }
+#platesGeneratorWrapper .ico-plate span { width: 26px; height: 55px;display: block; padding-bottom: 15px; cursor:pointer; }
+#platesGeneratorWrapper .ico-plate span:hover { opacity: 0.70;filter:alpha(opacity=70); }
+
+#platesGeneratorWrapper ul.colors { list-style: none; height: 32px; padding-bottom: 10px; margin-left:-15px; }
+#platesGeneratorWrapper ul.colors li { list-style: none; float: left; width:1px; display: inline; padding-right: 0px; margin-top:3px; }
+#platesGeneratorWrapper ul.colors li:first-child span { width: 65px; border-left: 1px solid #c8c7c7;  }
+#platesGeneratorWrapper .colors span { width: 32px; height: 32px; display: block; background: url(images/colors.png) no-repeat 0 0; font-size: 0; line-height: 0; text-indent: -4000px; }
+#platesGeneratorWrapper .colors span:hover { opacity: 0.70;filter:alpha(opacity=70); cursor:pointer; }
+#platesGeneratorWrapper .colors span.color2 { background-position: -71px 0; }
+#platesGeneratorWrapper .colors span.color3 { background-position: -108px 0; }
+#platesGeneratorWrapper .colors span.color4 { background-position: -147px 0; }
+#platesGeneratorWrapper .colors span.color5 { background-position: -186px 0; }
+#platesGeneratorWrapper .colors span.color6 { background-position: -224px 0; }
+#platesGeneratorWrapper .colors span.color7 { background-position: -262px 0; }
+#platesGeneratorWrapper .colors span.color8 { background-position: -301px 0; }
+#platesGeneratorWrapper .colors span.color9 { background-position: -342px 0; }
+#platesGeneratorWrapper .colors span.color10 { background-position: -380px 0; }
+#platesGeneratorWrapper .colors span.color11 { background-position: -418px 0; }
+#platesGeneratorWrapper .colors span.color12 { background-position: -457px 0; }
+#platesGeneratorWrapper .colors span.color13 { background-position: -495px 0; }
+#platesGeneratorWrapper .colors span.color14 { background-position: -533px 0; }
+#platesGeneratorWrapper .colors span.color15 { background-position: -571px 0; }
+#platesGeneratorWrapper .colors span.color16 { background-position: -611px 0; }
+#platesGeneratorWrapper .colors span.color17 { background-position: -648px 0; }
+
+
+#platesGeneratorWrapper .big-field { color: #0c0005; font-size: 55px; line-height: 55px; font-family: 'plate', arial, serif; letter-spacing: -2px; width: 378px; border: 1px solid #9b9b9c; border-radius: 14px; -moz-border-radius: 14px; -webkit-border-radius: 14px; -o-border-radius: 14px; box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1); -moz-box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1); -webkit-box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1); -o-box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1); padding: 22px 10px 18px 27px; }
+
+
+#platesGeneratorWrapper .color-plate-select label { font-size: 15px; color: #918f94; }
+#platesGeneratorWrapper .color-plate-select .select2 { width: 200px; }
+
+#platesGeneratorWrapper .tab-style ul { list-style: none; }
+#platesGeneratorWrapper .tab-style > ul > li { width: 390px; float: left; display: inline; line-height: 16px;  }
+#platesGeneratorWrapper .tab-style img { margin-left: 20px;  }
+#platesGeneratorWrapper .tab-style p.radio { padding-bottom: 6px; }
+
+#platesGeneratorWrapper .tab-select ul { list-style: none; padding-bottom: 20px; padding-left: 10px; }
+#platesGeneratorWrapper .tab-select > ul > li { width: 394px; float: left; display: inline; }
+#platesGeneratorWrapper .tab-select ul ul li { padding-bottom: 5px; }
+#platesGeneratorWrapper .tab-select p.radio { padding-bottom: 6px; }
+
+
+
+#platesGeneratorWrapper  img {
+	max-width: 100%; 
+	vertical-align: baseline;
+}
+
+#platesGeneratorWrapper h3
+ {
+	margin: 24px 0;
+	margin: 1.714285714rem 0;
+	line-height: 1.714285714;
+}
+
+#platesGeneratorWrapper ul	{
+		margin-left: 0;
+	}
+
+#platesGeneratorWrapper li {
+	margin: 0 0 0 36px;
+	margin: 0 0 0 2.571428571rem;
+}
+
