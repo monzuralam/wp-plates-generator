@@ -6,4 +6,5 @@ This is a Wordpress plugin which can be used to run online license/registration 
 
 ##WATCH DEMO##
 Click on the image below to watch the plugin in action
+
 [![PlatesGenerator](http://img.youtube.com/vi/OMt-172hnxI/0.jpg)](https://youtu.be/OMt-172hnxI)
