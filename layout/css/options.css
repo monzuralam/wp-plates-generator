@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .inside #att-wrapper { padding:0 10px; margin-bottom:20px;}
 /*#att-form-wrapper { margin-top:10px;}*/
 
@@ -491,3 +496,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', end
 	float:right;
 }
 
+.postbox .submitbox, .stuffbox .submitbox {
+	padding: 0 12px;
+}

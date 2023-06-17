@@ -33,30 +33,31 @@ function pg_action_init() {
 		'your_mail' => get_settings('admin_email')
 	);		
 }
+add_action('init', 'pg_action_init');
 
-function pg_sidebar( $save_button = false ) { 
-	$output = '';
-    ob_start();
-?>
-<div class="inner-sidebar">
-<?php
-    $output .= ob_get_contents();
-    ob_end_clean();
-
-$output .= '
-  <div class="stuffbox">
-    <h3>Help</h3>
-    <div class="submitbox">
-      <div class="inside">
-        <p>After you finish configuring the plugin, add PlatesGenerator to your posts/pages with <em>{platesgenerator:content}</em> shortcode.</p>
-        <p><b>Questions? Support? Custom work?</b><a href="mailto:support@atatari.com">support@atatari.com</a></p>
-      </div>
-    </div>
-  </div>
-
-</div>';
-return $output;
- }
+/**
+ * Sidebar Help on Plugin Dashboard
+ *
+ * @param boolean $save_button
+ * @return string
+ */
+function pg_sidebar() {
+	ob_start();
+	?>
+	<div class="inner-sidebar">
+		<div class="stuffbox">
+			<h3><?php esc_html_e( 'Help' ); ?></h3>
+			<div class="submitbox">
+			<div class="inside">
+				<p>After you finish configuring the plugin, add PlatesGenerator to your posts/pages with <em>{platesgenerator:content}</em> shortcode.</p>
+				<p><b><?php esc_html_e( 'Questions? Support? Custom work?'); ?></b><a href="mailto:support@atatari.com"><?php esc_html_e( 'support@atatari.com' ); ?></a></p>
+			</div>
+			</div>
+		</div>
+	</div>
+	<?php
+	return ob_get_clean();
+}
  
 
 function pg_array_empty($mixed) {
@@ -72,8 +73,6 @@ function pg_array_empty($mixed) {
     }
     return true;
 }  
-
-add_action('init', 'pg_action_init');
 
 class UPlatesGenerator{
 	private $wpdb,$content_key;
