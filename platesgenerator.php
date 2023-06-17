@@ -1178,7 +1178,7 @@ $output .= '<form id="form_formdata" action="" method="post">
 		unset($key,$value,$tmp_val);
 		//your_reg_caption your_reg_description plate_size_caption text_style_caption badge_caption border_caption slogan_caption
 		
-		$content_template = file_get_contents( plugins_url() . '/platesgenerator/tabs.php' );
+		$content_template = file_get_contents( PG_PLUGIN_URL . '/tabs.php' );
 		
 		$platesgenerator_tel_adr = get_option('platesgenerator_tel_adr');
 		if( !$platesgenerator_tel_adr || $platesgenerator_tel_adr =='' )
