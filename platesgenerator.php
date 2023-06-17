@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: PlatesGenerator
+Plugin Name: Plates Generator for WordPress
 Plugin URI: http://www.platesgenerator.com
 Description: Auto plates generator with borders, badges and styles. Usage: {platesgenerator:content}
 Version: 0.9.0
@@ -195,12 +195,12 @@ class UPlatesGenerator{
 					if( move_uploaded_file($_FILES['text_ttf']['tmp_name'], $uploadfile)){
 						$wpdb->insert( "{$wpdb->prefix}plgen_textstyles", 
 							array( 
-								'name' => mysql_escape_string( $_POST['text_name'] ),
+								'name' => sanitize_text_field( $_POST['text_name'] ),
 								'ttf' => $filename,
-								'xdist' => mysql_escape_string( $_POST['xdist'] ),
-								'maxtext' => mysql_escape_string( $_POST['maxtext'] ),
-								'multiplier' => mysql_escape_string( $_POST['multiplier'] ),
-								'font_vertical_dest' => mysql_escape_string( $_POST['font_vertical_dest'] )
+								'xdist' => sanitize_text_field( $_POST['xdist'] ),
+								'maxtext' => sanitize_text_field( $_POST['maxtext'] ),
+								'multiplier' => sanitize_text_field( $_POST['multiplier'] ),
+								'font_vertical_dest' => sanitize_text_field( $_POST['font_vertical_dest'] )
 							), 
 							array( 
 								'%s',
@@ -439,7 +439,7 @@ return $output;
 				if( $_POST['groupname'] != '' ){
 					$wpdb->insert( "{$wpdb->prefix}plgen_platesizes_groups", 
 						array( 
-							'name' => mysql_escape_string( $_POST['groupname'] )
+							'name' => sanitize_text_field( $_POST['groupname'] )
 						), 
 						array( 
 							'%s'
@@ -449,8 +449,8 @@ return $output;
 			break;
 			case 'delete_group':
 				if( $_POST['groupid'] != '' ){
-					$wpdb->delete( "{$wpdb->prefix}plgen_platesizes_groups", array( 'id' => mysql_escape_string( $_POST['groupid'] ) ) );
-					$wpdb->query( "DELETE FROM {$wpdb->prefix}plgen_platesizes WHERE `group` = '".mysql_escape_string( $_POST['groupid'] )."'" );
+					$wpdb->delete( "{$wpdb->prefix}plgen_platesizes_groups", array( 'id' => sanitize_text_field( $_POST['groupid'] ) ) );
+					$wpdb->query( "DELETE FROM {$wpdb->prefix}plgen_platesizes WHERE `group` = '".sanitize_text_field( $_POST['groupid'] )."'" );
 				};
 			break;
 			case 'append':
@@ -458,7 +458,7 @@ return $output;
 					$wpdb->insert( "{$wpdb->prefix}plgen_platesizes", 
 						array( 
 							'group' => intval( $_POST['add_plate_group'] ),
-							'name' => mysql_escape_string( $_POST['add_plate_name'] ),
+							'name' => sanitize_text_field( $_POST['add_plate_name'] ),
 							'width' => intval( $_POST['add_plate_width'] ),
 							'height' => intval( $_POST['add_plate_height'] )
 						), 
@@ -473,7 +473,7 @@ return $output;
 			break;
 			case 'delete_plate':
 				if( $_POST['plateid'] != '' ){
-					$wpdb->delete( "{$wpdb->prefix}plgen_platesizes", array( 'id' => mysql_escape_string( $_POST['plateid'] ) ) );
+					$wpdb->delete( "{$wpdb->prefix}plgen_platesizes", array( 'id' => sanitize_text_field( $_POST['plateid'] ) ) );
 				}
 			break;
 		}
@@ -655,12 +655,12 @@ $output .= '</div>';
 <?php 
 			foreach( $_POST['items'] as $key ){
 				if( is_numeric( $key['price'] ) ){
-					if( $wpdb->get_var( 'SELECT price FROM '. $wpdb->prefix .'plgen_prices WHERE elementid=\''.intval($key['sid']).'\' AND type=\''.mysql_escape_string($key['type']).'\''  ) == NULL)
+					if( $wpdb->get_var( 'SELECT price FROM '. $wpdb->prefix .'plgen_prices WHERE elementid=\''.intval($key['sid']).'\' AND type=\''.sanitize_text_field($key['type']).'\''  ) == NULL)
 						$wpdb->insert(
 							$wpdb->prefix .'plgen_prices',
 							array(
 								'elementid' => intval( $key['sid'] ),
-								'type' => mysql_escape_string( $key['type'] ),
+								'type' => sanitize_text_field( $key['type'] ),
 								'price' => floatval( $key['price'] )
 							),
 							array(
@@ -677,7 +677,7 @@ $output .= '</div>';
 							), 
 							array(
 								'elementid' => intval( $key['sid'] ),
-								'type' => mysql_escape_string( $key['type'] )
+								'type' => sanitize_text_field( $key['type'] )
 							), 
 							array(
 								'%f'
@@ -877,10 +877,10 @@ $output .= '</div>';
     </div>
 <?php 
 		
-		$options['platesgenerator_success_message'] = mysql_escape_string( $_POST['platesgenerator_success_message'] );
-		$options['platesgenerator_tel_adr'] = mysql_escape_string( $_POST['platesgenerator_tel_adr'] );
-		$options['platesgenerator_currency_symbol'] = mysql_escape_string( $_POST['platesgenerator_currency_symbol'] );
-		$options['platesgenerator_money_format'] = mysql_escape_string( $_POST['platesgenerator_money_format'] );
+		$options['platesgenerator_success_message'] = sanitize_text_field( $_POST['platesgenerator_success_message'] );
+		$options['platesgenerator_tel_adr'] = sanitize_text_field( $_POST['platesgenerator_tel_adr'] );
+		$options['platesgenerator_currency_symbol'] = sanitize_text_field( $_POST['platesgenerator_currency_symbol'] );
+		$options['platesgenerator_money_format'] = sanitize_text_field( $_POST['platesgenerator_money_format'] );
 		foreach( $options as $key=>$value )
 			update_option( $key, $value );
 		} 
@@ -1217,14 +1217,14 @@ function show_config(){
 <?php 	
 		if (!isset($_POST['defaults'])) {
 			$options = array(
-				'your_reg_caption' => mysql_escape_string( $_POST['your_reg_caption'] ),
-				'your_reg_description' => mysql_escape_string( str_replace("\r\n" , '<br/>', str_replace("\r\n" , "<br/>",  $_POST['your_reg_description'] ))),
-				'plate_size_caption' => mysql_escape_string( $_POST['plate_size_caption'] ),
-				'text_style_caption' => mysql_escape_string( $_POST['text_style_caption'] ),
-				'badge_caption' => mysql_escape_string( $_POST['badge_caption'] ),
-				'border_caption' => mysql_escape_string( $_POST['border_caption'] ),
-				'slogan_caption' => mysql_escape_string( $_POST['slogan_caption'] ),
-				'your_mail' => mysql_escape_string( $_POST['your_mail'] )
+				'your_reg_caption' => sanitize_text_field( $_POST['your_reg_caption'] ),
+				'your_reg_description' => sanitize_text_field( str_replace("\r\n" , '<br/>', str_replace("\r\n" , "<br/>",  $_POST['your_reg_description'] ))),
+				'plate_size_caption' => sanitize_text_field( $_POST['plate_size_caption'] ),
+				'text_style_caption' => sanitize_text_field( $_POST['text_style_caption'] ),
+				'badge_caption' => sanitize_text_field( $_POST['badge_caption'] ),
+				'border_caption' => sanitize_text_field( $_POST['border_caption'] ),
+				'slogan_caption' => sanitize_text_field( $_POST['slogan_caption'] ),
+				'your_mail' => sanitize_text_field( $_POST['your_mail'] )
 			);
 		}
 		foreach( $options as $key=>$value ) {
