@@ -1031,7 +1031,7 @@ $output .= '</div>';
 		
 		$badges = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}plgen_badges", ARRAY_A);
 		foreach( $badges as $badges_b ){
-			$result .= "<li style=\"float:left;margin-right:5px\"><a href='javascript:void(0);' badge_id='{$badges_b['id']}' class='delete_badge_button'><img src='".plugins_url()."/platesgenerator/config_tmpls/img/delete.png'/></a><br/><img src='".plugins_url()."/platesgenerator/badge_preview.php?file={$badges_b['id']}'/><br/>{$badges_b['id']}</li>";
+			$result .= "<li style=\"float:left;margin-right:5px\"><a href='javascript:void(0);' badge_id='{$badges_b['id']}' class='delete_badge_button'><img src='".PG_PLUGIN_URL."/config_tmpls/img/delete.png'/></a><br/><img src='".PG_PLUGIN_URL."/badge_preview.php?file={$badges_b['id']}'/><br/>{$badges_b['id']}</li>";
 			
 		}
 		$result .= '<ul></div><div style="clear:both"></div><hr>';
@@ -1122,7 +1122,7 @@ if (count($rows) > 0) {
 	
 $i = 1;
 foreach( $rows as $row ){
-	$output .= "<li style=\"float:left;margin-right:5px\"><a href='javascript:void(0);' badge_id='{$row['id']}' class='delete_badge_button'><img src='".plugins_url()."/platesgenerator/config_tmpls/img/delete.png'/></a><br/><img src='".plugins_url()."/platesgenerator/badge_preview.php?file={$row['id']}'/><br/>{$row['id']}</li>";
+	$output .= "<li style=\"float:left;margin-right:5px\"><a href='javascript:void(0);' badge_id='{$row['id']}' class='delete_badge_button'><img src='".PG_PLUGIN_URL."/config_tmpls/img/delete.png'/></a><br/><img src='".PG_PLUGIN_URL."/badge_preview.php?file={$row['id']}'/><br/>{$row['id']}</li>";
 	
 	$i++;
 }
